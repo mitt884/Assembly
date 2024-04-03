@@ -11,7 +11,7 @@
 	la $s1, Reverse 
 get_string:
 	li $v0, 12          #read character
-	syscall 
+	syscall
 	beq $v0, $t2, end_get_string  # end loop if new line
 	add $t3, $t0, $s0  #address of string[i]
 	sb $v0, 0($t3)     
